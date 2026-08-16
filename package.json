@@ -1,0 +1,13 @@
+{
+  "name": "black-white-grunge-music",
+  "version": "1.0.0",
+  "description": "Black White Grunge Music Presentation Website",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/css/output.css --minify",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/css/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
