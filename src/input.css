@@ -169,16 +169,45 @@ body {
   background: rgba(255,255,255,0.05);
 }
 
-/* Glass nav */
+/* Glass nav — hitam pekat agar logo menyatu */
 .nav-glass {
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: #000000;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-scrolled {
-  background: rgba(10, 10, 10, 0.95);
+  background: #000000;
+}
+
+/* Nav links (Samsung-style centered menu) */
+.nav-link {
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #999999;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 /* Card */
