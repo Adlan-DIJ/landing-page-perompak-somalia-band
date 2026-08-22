@@ -24,7 +24,12 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   background-color: #0a0a0a;
   color: #f5f5f5;
   overflow-x: hidden;
@@ -166,17 +171,43 @@ body {
 
 .btn-secondary:hover {
   border-color: #fff;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* Glass nav — hitam pekat agar logo menyatu */
-.nav-glass {
+/* Navbar — desktop: bar penuh solid; mobile (<768px): solid black pill */
+.nav-pill {
   background: #000000;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.nav-scrolled .nav-pill,
 .nav-scrolled {
   background: #000000;
+}
+
+@media (max-width: 767px) {
+  .nav-pill {
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-scrolled .nav-pill {
+    background: #000000;
+    box-shadow:
+      0 14px 48px rgba(0, 0, 0, 0.75),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+}
+
+.logo-blend {
+  mix-blend-mode: screen;
+}
+
+.drawer-bg {
+  background: radial-gradient(130% 100% at 50% 0%, #101010 0%, #000000 55%);
 }
 
 /* Nav links (Samsung-style centered menu) */
@@ -194,7 +225,7 @@ body {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -236,19 +267,31 @@ body {
 
 /* Animations */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .animate-in {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .animate-in.visible {
@@ -258,7 +301,7 @@ body {
 
 /* Noise overlay */
 .noise-bg::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -268,4 +311,29 @@ body {
   opacity: 0.025;
   z-index: 9999;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== Desktop navbar: full-bleed black + fade-in-down (desktop only) ===== */
+@media (min-width: 768px) {
+  #navbar {
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    animation: navFadeInDown 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  #navbar .nav-pill {
+    background: transparent;
+    border-bottom: none;
+  }
+}
+
+@keyframes navFadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

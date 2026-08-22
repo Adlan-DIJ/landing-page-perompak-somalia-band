@@ -1,18 +1,34 @@
 <!-- ===== NAVBAR ===== -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-glass transition-all duration-300">
-  <div class="container relative flex items-center justify-between h-16 md:h-[76px] px-6 lg:px-8">
-
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+>
+  <div
+    class="nav-pill container relative mx-auto flex items-center justify-between h-16 md:h-[76px] px-6 lg:px-8 max-md:h-16 max-md:pl-8 max-md:pr-8 transition-all duration-500"
+  >
     <!-- Logo + Brand -->
-    <a href="#hero" class="group flex items-center gap-3" aria-label="Perompak Somalia">
-      <img src="Assets/Image/logo_black.jpeg" alt="Logo Perompak Somalia" class="h-12 w-auto md:h-14 object-contain transition-transform duration-500 ease-out group-hover:scale-105">
+    <a href="#hero" class="group flex items-center gap-3 max-md:gap-3">
+      <img
+        src="Assets/Image/logo_black.jpeg"
+        alt="Logo Perompak Somalia"
+        class="logo-blend h-9 w-auto md:h-10 max-md:h-11 object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+      />
       <span class="flex flex-col leading-none">
-        <span class="font-display text-[17px] md:text-lg font-bold tracking-tight text-white">PEROMPAK</span>
-        <span class="mt-1 text-[10px] md:text-[11px] font-medium tracking-[0.35em] text-[#777] group-hover:text-white transition-colors duration-300">SOMALIA</span>
+        <span
+          class="font-display text-[17px] md:text-lg max-md:text-[19px] font-bold tracking-tight text-white"
+          >PEROMPAK</span
+        >
+        <span
+          class="mt-1 text-[10px] md:text-[11px] max-md:text-[11px] font-medium tracking-[0.35em] text-[#777] group-hover:text-white transition-colors duration-300"
+          >SOMALIA</span
+        >
       </span>
     </a>
 
-    <!-- Desktop Nav (centered, Samsung-style) -->
-    <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:gap-11">
+    <!-- Desktop Nav (centered) -->
+    <div
+      class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:gap-11"
+    >
       <a href="#hero" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#featured" class="nav-link">Featured</a>
@@ -20,63 +36,208 @@
       <a href="#contact" class="nav-link">Contact</a>
     </div>
 
+    <!-- Desktop CTA (right side) -->
+    <!-- Desktop CTA (right side) -->
+    <a
+      href="#contact"
+      class="btn-primary hidden md:inline-flex !px-6 !py-2.5 !text-xs"
+      >Contact Information</a
+    >
+
     <!-- Mobile Toggle -->
-    <button id="menuToggle" class="md:hidden relative z-10 flex flex-col justify-center items-center w-8 h-8 gap-1.5" aria-label="Buka menu">
-      <span id="bar1" class="block w-5 h-[1.5px] bg-white transition-all duration-300"></span>
-      <span id="bar2" class="block w-5 h-[1.5px] bg-white transition-all duration-300"></span>
-      <span id="bar3" class="block w-5 h-[1.5px] bg-white transition-all duration-300"></span>
+    <button
+      id="menuToggle"
+      class="md:hidden relative z-10 flex flex-col justify-center items-center w-11 h-11 gap-[6px] rounded-full hover:bg-white/5 active:scale-90 transition-all duration-300"
+      aria-label="Buka menu"
+    >
+      <span class="block w-6 h-[1.5px] bg-white"></span>
+      <span class="block w-6 h-[1.5px] bg-white"></span>
+      <span class="block w-6 h-[1.5px] bg-white"></span>
     </button>
   </div>
 </nav>
 
 <!-- Mobile Drawer Backdrop -->
-<div id="drawerBackdrop" class="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500"></div>
+<div
+  id="drawerBackdrop"
+  class="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500"
+></div>
 
-<!-- Mobile Drawer (Samsung-style, slide dari kiri) -->
-<aside id="mobileMenu" class="fixed inset-y-0 left-0 z-[70] flex w-[85%] max-w-sm -translate-x-full flex-col bg-black border-r border-[#1f1f1f] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
-
+<!-- Mobile Drawer (fullscreen, slide dari kanan) -->
+<aside
+  id="mobileMenu"
+  class="fixed inset-0 z-[70] flex translate-x-full flex-col drawer-bg transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+>
   <!-- Drawer Header -->
-  <div class="flex items-center justify-between px-6 h-16 border-b border-[#1c1c1c] shrink-0">
-    <div class="flex items-center gap-2.5">
-      <img src="Assets/Image/logo_black.jpeg" alt="" class="h-9 w-auto">
-      <span class="font-display text-sm font-bold tracking-tight text-white">
-        PEROMPAK
-        <span class="block text-[9px] font-medium tracking-[0.35em] text-[#666] mt-1">SOMALIA</span>
+  <div
+    class="flex items-center justify-between pl-8 pr-8 h-16 border-b border-[#1c1c1c] shrink-0"
+  >
+    <div class="flex items-center gap-3">
+      <img
+        src="Assets/Image/logo_black.jpeg"
+        alt=""
+        class="logo-blend h-11 w-auto object-contain"
+      />
+      <span class="flex flex-col leading-none">
+        <span
+          class="font-display text-[19px] font-bold tracking-tight text-white"
+          >PEROMPAK</span
+        >
+        <span class="mt-1 text-[11px] font-medium tracking-[0.35em] text-[#777]"
+          >SOMALIA</span
+        >
       </span>
     </div>
-    <button id="drawerClose" aria-label="Tutup menu" class="w-9 h-9 flex items-center justify-center text-[#888] hover:text-white transition-colors">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <button
+      id="drawerClose"
+      aria-label="Tutup menu"
+      class="w-10 h-10 flex items-center justify-center rounded-full border border-[#262626] text-[#888] hover:text-white hover:border-white/30 hover:rotate-90 active:scale-90 transition-all duration-300"
+    >
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
     </button>
   </div>
 
-  <!-- Drawer Links -->
-  <nav class="flex-1 overflow-y-auto px-6 pt-5">
-    <p class="text-[10px] tracking-[0.3em] text-[#444] mb-1">MENU</p>
+  <!-- Drawer Body -->
+  <div class="flex-1 overflow-y-auto px-8 pt-6 pb-10">
+    <p class="text-[10px] tracking-[0.3em] text-[#444] mb-2">EXPLORE</p>
 
-    <a href="#hero" class="mobile-link group flex items-baseline gap-4 py-4 border-b border-[#1a1a1a]">
-      <span class="text-[11px] tracking-[0.25em] text-[#444] group-hover:text-[#999] transition-colors duration-300">01</span>
-      <span class="font-display text-[26px] font-bold tracking-tight text-[#bbb] group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300">Home</span>
-    </a>
-    <a href="#about" class="mobile-link group flex items-baseline gap-4 py-4 border-b border-[#1a1a1a]">
-      <span class="text-[11px] tracking-[0.25em] text-[#444] group-hover:text-[#999] transition-colors duration-300">02</span>
-      <span class="font-display text-[26px] font-bold tracking-tight text-[#bbb] group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300">About</span>
-    </a>
-    <a href="#featured" class="mobile-link group flex items-baseline gap-4 py-4 border-b border-[#1a1a1a]">
-      <span class="text-[11px] tracking-[0.25em] text-[#444] group-hover:text-[#999] transition-colors duration-300">03</span>
-      <span class="font-display text-[26px] font-bold tracking-tight text-[#bbb] group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300">Featured</span>
-    </a>
-    <a href="#gallery" class="mobile-link group flex items-baseline gap-4 py-4 border-b border-[#1a1a1a]">
-      <span class="text-[11px] tracking-[0.25em] text-[#444] group-hover:text-[#999] transition-colors duration-300">04</span>
-      <span class="font-display text-[26px] font-bold tracking-tight text-[#bbb] group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300">Gallery</span>
-    </a>
-    <a href="#contact" class="mobile-link group flex items-baseline gap-4 py-4 border-b border-[#1a1a1a]">
-      <span class="text-[11px] tracking-[0.25em] text-[#444] group-hover:text-[#999] transition-colors duration-300">05</span>
-      <span class="font-display text-[26px] font-bold tracking-tight text-[#bbb] group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300">Contact</span>
-    </a>
-  </nav>
+    <div class="flex flex-col">
+      <a
+        href="#hero"
+        class="mobile-link group flex items-center justify-between py-5"
+      >
+        <span
+          class="font-display text-2xl font-bold tracking-tight text-[#ccc] group-hover:text-white transition-colors duration-300"
+          >Home</span
+        >
+        <svg
+          class="w-4 h-4 text-[#555] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7 17L17 7M17 7H8M17 7V16"
+          />
+        </svg>
+      </a>
+      <a
+        href="#about"
+        class="mobile-link group flex items-center justify-between py-5"
+      >
+        <span
+          class="font-display text-2xl font-bold tracking-tight text-[#ccc] group-hover:text-white transition-colors duration-300"
+          >About</span
+        >
+        <svg
+          class="w-4 h-4 text-[#555] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7 17L17 7M17 7H8M17 7V16"
+          />
+        </svg>
+      </a>
+      <a
+        href="#featured"
+        class="mobile-link group flex items-center justify-between py-5"
+      >
+        <span
+          class="font-display text-2xl font-bold tracking-tight text-[#ccc] group-hover:text-white transition-colors duration-300"
+          >Featured</span
+        >
+        <svg
+          class="w-4 h-4 text-[#555] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7 17L17 7M17 7H8M17 7V16"
+          />
+        </svg>
+      </a>
+      <a
+        href="#gallery"
+        class="mobile-link group flex items-center justify-between py-5"
+      >
+        <span
+          class="font-display text-2xl font-bold tracking-tight text-[#ccc] group-hover:text-white transition-colors duration-300"
+          >Gallery</span
+        >
+        <svg
+          class="w-4 h-4 text-[#555] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7 17L17 7M17 7H8M17 7V16"
+          />
+        </svg>
+      </a>
+      <a
+        href="#contact"
+        class="mobile-link group flex items-center justify-between py-5"
+      >
+        <span
+          class="font-display text-2xl font-bold tracking-tight text-[#ccc] group-hover:text-white transition-colors duration-300"
+          >Contact</span
+        >
+        <svg
+          class="w-4 h-4 text-[#555] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7 17L17 7M17 7H8M17 7V16"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <div class="border-t border-[#1c1c1c] mt-2 pt-6">
+      <a
+        href="#contact"
+        class="group flex items-center justify-center w-full py-4 rounded-full border border-[#333] text-white text-sm font-semibold tracking-wide hover:border-white hover:bg-white/5 transition-all duration-300"
+        >Contact Information</a
+      >
+    </div>
+  </div>
 
   <!-- Drawer Footer -->
-  <div class="px-6 py-5 border-t border-[#1c1c1c] shrink-0">
-    <p class="text-[10px] tracking-[0.25em] text-[#555]">&copy; PEROMPAK SOMALIA</p>
+  <div
+    class="flex items-center justify-between px-8 py-6 border-t border-[#1c1c1c] shrink-0"
+  >
+    <p class="text-[10px] tracking-[0.25em] text-[#555]">
+      &copy; PEROMPAK SOMALIA
+    </p>
+    <p class="text-[10px] tracking-[0.25em] text-[#555]">NOIR SOUND</p>
   </div>
 </aside>

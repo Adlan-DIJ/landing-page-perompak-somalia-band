@@ -43,23 +43,17 @@
       const mobileMenu = document.getElementById('mobileMenu');
       const drawerBackdrop = document.getElementById('drawerBackdrop');
       const drawerClose = document.getElementById('drawerClose');
-      const bar1 = document.getElementById('bar1');
-      const bar2 = document.getElementById('bar2');
-      const bar3 = document.getElementById('bar3');
       let menuOpen = false;
 
       function setDrawer(open) {
         menuOpen = open;
-        mobileMenu.classList.toggle('-translate-x-full', !open);
+        mobileMenu.classList.toggle('translate-x-full', !open);
         drawerBackdrop.classList.toggle('opacity-0', !open);
         drawerBackdrop.classList.toggle('pointer-events-none', !open);
-        bar1.style.transform = open ? 'rotate(45deg) translate(4px, 4px)' : '';
-        bar2.style.opacity = open ? '0' : '1';
-        bar3.style.transform = open ? 'rotate(-45deg) translate(4px, -4px)' : '';
         document.body.style.overflow = open ? 'hidden' : '';
       }
 
-      menuToggle.addEventListener('click', () => setDrawer(!menuOpen));
+      menuToggle.addEventListener('click', () => setDrawer(true));
       drawerClose.addEventListener('click', () => setDrawer(false));
       drawerBackdrop.addEventListener('click', () => setDrawer(false));
 
