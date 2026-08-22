@@ -1,31 +1,83 @@
 <!-- ===== HERO ===== -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <!-- BG Grid -->
-  <div class="absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-[2px] opacity-15">
-    <img src="Assets/Image/IMG_0324.JPG.jpeg" alt="" class="w-full h-full object-cover img-grayscale">
-    <img src="Assets/Image/IMG_0325.JPG.jpeg" alt="" class="w-full h-full object-cover img-grayscale">
-    <img src="Assets/Image/IMG_0326.JPG.jpeg" alt="" class="w-full h-full object-cover img-grayscale hidden md:block">
-    <img src="Assets/Image/IMG_9497.JPEG" alt="" class="w-full h-full object-cover img-grayscale hidden md:block">
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <!-- BG Carousel -->
+  <div class="absolute inset-0 overflow-hidden">
+    <img
+      src="Assets/Image/picture3.PNG"
+      alt=""
+      class="hero-slide active absolute inset-0 w-full h-full object-cover"
+    />
+    <img
+      src="Assets/Image/picture4.PNG"
+      alt=""
+      class="hero-slide absolute inset-0 w-full h-full object-cover"
+    />
+    <img
+      src="Assets/Image/picture6.JPEG"
+      alt=""
+      class="hero-slide absolute inset-0 w-full h-full object-cover"
+    />
   </div>
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]"></div>
 
   <!-- Content -->
-  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-    <p class="section-label mb-6 animate-in">Black White Grunge Music</p>
-    <h1 class="font-display font-bold tracking-tight leading-none mb-6 animate-in">
-      <span class="block text-6xl sm:text-7xl md:text-8xl lg:text-[120px]" style="background: linear-gradient(135deg, #fff 0%, #888 50%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">NOIR</span>
-      <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#555] mt-2 font-medium">SOUND</span>
+  <div
+    class="relative z-10 text-center px-6 max-w-4xl mx-auto py-24 hero-text-shadow"
+  >
+    <p class="section-label section-label-hero mb-10 animate-in">
+      Experimental Surf Rock Music
+    </p>
+    <h1
+      class="font-display font-bold tracking-tight leading-none mb-12 animate-in"
+    >
+      <span
+        class="block text-6xl sm:text-7xl md:text-8xl lg:text-[110px]"
+        style="
+          background: linear-gradient(135deg, #fff 0%, #888 50%, #fff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        "
+        >PEROMPAK</span
+      >
+      <span
+        class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/80 mt-5 font-medium tracking-[0.35em]"
+        >SOMALIA</span
+      >
     </h1>
-    <p class="section-subtitle mx-auto mb-10 animate-in">Where darkness meets melody. Experience the raw essence of grunge music through a monochrome lens.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-in">
-      <a href="#gallery" class="btn-primary">Explore Collection</a>
-      <a href="#about" class="btn-secondary">Learn More</a>
+    <p class="section-subtitle mx-auto mb-40 animate-in">
+      Menghadirkan perjalanan sonik yang terinspirasi oleh laut, kegelisahan,
+      dan imajinasi tanpa batas.
+    </p>
+    <div
+      class="flex flex-col sm:flex-row gap-5 justify-center animate-in pt-10 sm:pt-14"
+    >
+      <a href="#contact" class="btn-primary">Contact Information</a>
+      <a href="#about" class="btn-secondary btn-secondary-strong">Learn More</a>
     </div>
   </div>
 
   <!-- Scroll -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <svg class="w-5 h-5 text-[#555]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-  </div>
+  <a
+    href="#about"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 group"
+  >
+    <span
+      class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.3em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
+      >Click to Explore</span
+    >
+    <svg
+      class="w-7 h-7 sm:w-8 sm:h-8 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] animate-bounce transition-transform duration-300 group-hover:translate-y-1"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      viewBox="0 0 24 24"
+    >
+      <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </a>
 </section>

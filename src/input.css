@@ -255,6 +255,46 @@ body {
   transform: translateY(-4px);
 }
 
+/* Hero background carousel */
+.hero-slide {
+  opacity: 0;
+  transform: scale(1.1);
+  z-index: 1;
+  transition:
+    opacity 2s cubic-bezier(0.33, 0, 0.2, 1),
+    transform 9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Hero text readability over natural photos */
+.hero-text-shadow {
+  text-shadow:
+    0 2px 24px rgba(0, 0, 0, 0.6),
+    0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+/* Hero-only overrides (section lain tidak terpengaruh) */
+.section-label-hero {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.btn-secondary-strong {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.btn-secondary-strong:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 /* Image grayscale */
 .img-grayscale {
   filter: grayscale(100%);

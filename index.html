@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/css/output.css">
+  <link rel="stylesheet" href="dist/css/output.css?v=2">
 </head>
 <body class="noise-bg">
 
@@ -72,6 +72,17 @@
           }
         });
       });
+
+      // --- Hero carousel ---
+      const heroSlides = document.querySelectorAll('.hero-slide');
+      if (heroSlides.length > 1) {
+        let currentSlide = 0;
+        setInterval(() => {
+          heroSlides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % heroSlides.length;
+          heroSlides[currentSlide].classList.add('active');
+        }, 7000);
+      }
 
       // --- Scroll animations ---
       const observer = new IntersectionObserver((entries) => {
