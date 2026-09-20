@@ -12,12 +12,6 @@
   --color-noir-pure: #ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -239,6 +233,11 @@ body {
 
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+/* Gallery: jarak teks deskripsi dengan baris tombol filter (bisa disesuaikan) */
+#gallery .section-subtitle {
+  margin-bottom: 40px;
 }
 
 /* Gallery filter buttons */
