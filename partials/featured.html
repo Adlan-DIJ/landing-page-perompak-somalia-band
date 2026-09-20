@@ -1,42 +1,70 @@
 <!-- ===== FEATURED ===== -->
-<section id="featured" class="section bg-[#111]">
-  <div class="container">
+<section id="featured" class="section bg-[#111] relative overflow-hidden">
+  <!-- BG Decorative Lines -->
+  <div
+    class="pointer-events-none absolute inset-0 opacity-[0.07]"
+    style="
+      background-image:
+        repeating-linear-gradient(0deg, #ffffff 0 1px, transparent 1px 90px),
+        repeating-linear-gradient(90deg, #ffffff 0 1px, transparent 1px 90px);
+    "
+    aria-hidden="true"
+  ></div>
+  <div class="container relative">
     <div class="text-center mb-14 animate-in">
       <p class="section-label">Featured</p>
       <h2 class="section-title">Iconic <span class="text-[#666]">Moments</span></h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Card 1 -->
-      <div class="card group cursor-pointer animate-in">
-        <div class="relative overflow-hidden h-64 sm:h-72">
-          <img src="Assets/Image/IMG_9499.JPEG" alt="Live Performance" class="w-full h-full object-cover img-grayscale group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <p class="text-[10px] tracking-[0.2em] uppercase text-[#888] mb-1">Live Performance</p>
-            <h3 class="font-display text-lg font-bold text-white">Underground Sessions</h3>
-          </div>
+      <div class="card group cursor-pointer animate-in flex flex-col overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-black/60">
+        <div class="relative shrink-0 overflow-hidden h-72 sm:h-80">
+          <img
+            src="Assets/Image/picture3.PNG"
+            alt="Live Performance"
+            class="w-full h-full object-cover grayscale transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110 group-hover:grayscale-0"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/30 to-transparent"></div>
+        </div>
+        <div class="flex-1 flex flex-col justify-end pl-16 sm:pl-24 pr-8 sm:pr-10 pt-6 pb-8 sm:pt-8 sm:pb-10">
+          <p class="text-[10px] tracking-[0.2em] uppercase text-[#888] transition-colors duration-500 group-hover:text-white">Live Performance</p>
+          <h3 class="font-display text-lg sm:text-xl font-bold text-white leading-tight mt-2">
+            Underground Sessions
+          </h3>
         </div>
       </div>
       <!-- Card 2 -->
-      <div class="card group cursor-pointer animate-in">
-        <div class="relative overflow-hidden h-64 sm:h-72">
-          <img src="Assets/Image/IMG_9500.JPEG" alt="Studio Recording" class="w-full h-full object-cover img-grayscale group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <p class="text-[10px] tracking-[0.2em] uppercase text-[#888] mb-1">Studio</p>
-            <h3 class="font-display text-lg font-bold text-white">Raw Recordings</h3>
-          </div>
+      <div class="card group cursor-pointer animate-in flex flex-col overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-black/60">
+        <div class="relative shrink-0 overflow-hidden h-72 sm:h-80">
+          <img
+            src="Assets/Image/picture4.PNG"
+            alt="Studio Recording"
+            class="w-full h-full object-cover grayscale transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110 group-hover:grayscale-0"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/30 to-transparent"></div>
+        </div>
+        <div class="flex-1 flex flex-col justify-end pl-16 sm:pl-24 pr-8 sm:pr-10 pt-6 pb-8 sm:pt-8 sm:pb-10">
+          <p class="text-[10px] tracking-[0.2em] uppercase text-[#888] transition-colors duration-500 group-hover:text-white">Studio</p>
+          <h3 class="font-display text-lg sm:text-xl font-bold text-white leading-tight mt-2">
+            Raw Recordings
+          </h3>
         </div>
       </div>
       <!-- Card 3 -->
-      <div class="card group cursor-pointer animate-in sm:col-span-2 lg:col-span-1">
-        <div class="relative overflow-hidden h-64 sm:h-72">
-          <img src="Assets/Image/IMG_9502.JPEG" alt="Band Portrait" class="w-full h-full object-cover img-grayscale group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
-            <p class="text-[10px] tracking-[0.2em] uppercase text-[#888] mb-1">Portraits</p>
-            <h3 class="font-display text-lg font-bold text-white">Band Chronicles</h3>
-          </div>
+      <div class="card group cursor-pointer animate-in flex flex-col overflow-hidden sm:col-span-2 lg:col-span-1 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-black/60">
+        <div class="relative shrink-0 overflow-hidden h-72 sm:h-80">
+          <img
+            src="Assets/Image/picture.JPEG"
+            alt="Band Portrait"
+            class="w-full h-full object-cover grayscale transition-all duration-[1200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110 group-hover:grayscale-0"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/30 to-transparent"></div>
+        </div>
+        <div class="flex-1 flex flex-col justify-end pl-16 sm:pl-24 pr-8 sm:pr-10 pt-6 pb-8 sm:pt-8 sm:pb-10">
+          <p class="text-[10px] tracking-[0.2em] uppercase text-[#888] transition-colors duration-500 group-hover:text-white">Portraits</p>
+          <h3 class="font-display text-lg sm:text-xl font-bold text-white leading-tight mt-2">
+            Band Chronicles
+          </h3>
         </div>
       </div>
     </div>

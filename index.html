@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/css/output.css?v=3">
+  <link rel="stylesheet" href="dist/css/output.css?v=4">
 </head>
 <body class="noise-bg">
 
@@ -31,7 +31,7 @@
       const slots = document.querySelectorAll('[data-include]');
       await Promise.all(Array.from(slots).map(async (slot) => {
         const name = slot.getAttribute('data-include');
-        const res = await fetch('partials/' + name + '.html');
+        const res = await fetch('partials/' + name + '.html?v=4');
         if (!res.ok) throw new Error('Gagal memuat partial: ' + name);
         slot.outerHTML = await res.text();
       }));
@@ -100,6 +100,21 @@
       window.addEventListener('scroll', () => {
         navbar.classList.toggle('nav-scrolled', window.scrollY > 40);
       }, { passive: true });
+
+      // --- Gallery filter ---
+      const galleryBtns = document.querySelectorAll('[data-gallery-filter]');
+      const galleryItems = document.querySelectorAll('[data-gallery-item]');
+      galleryBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          galleryBtns.forEach((b) => b.classList.remove('gallery-filter-active'));
+          btn.classList.add('gallery-filter-active');
+          const cat = btn.getAttribute('data-gallery-filter');
+          galleryItems.forEach((item) => {
+            const match = cat === 'all' || item.getAttribute('data-gallery-item') === cat;
+            item.classList.toggle('hidden', !match);
+          });
+        });
+      });
     }
 
     loadPartials().then(initSite).catch((err) => console.error(err));

@@ -241,6 +241,31 @@ body {
   transform: scaleX(1);
 }
 
+/* Gallery filter buttons */
+.gallery-filter-btn {
+  padding: 10px 24px;
+  border-radius: 9999px;
+  border: 1px solid #444;
+  color: #999999;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-filter-btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.gallery-filter-active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
 /* Card */
 .card {
   background: #161616;
