@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Black White Grunge Music Presentation Website",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/css/output.css --minify",
-    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/css/output.css --watch"
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/watch.mjs",
+    "check": "node scripts/check-assets.mjs",
+    "deploy": "node scripts/deploy.mjs"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",

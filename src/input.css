@@ -363,6 +363,13 @@ body {
   transform: translateY(0);
 }
 
+/* Fallback: bila JavaScript tidak berjalan/gagal, konten tetap tampil
+   dan tidak terkunci di opacity 0 (dikendalikan class "js" di <head>). */
+html:not(.js) .animate-in {
+  opacity: 1;
+  transform: none;
+}
+
 /* Noise overlay */
 .noise-bg::before {
   content: "";
